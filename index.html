@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شبرا الخيمة المستدامة | نحو مدينة خضراء ومتقدمة</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        eco: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        tealCustom: {
+                            500: '#0d9488',
+                            700: '#0f766e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #0d9488 100%);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #16a34a;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-12 h-12 bg-eco-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-eco-600/30">
+                        <i class="fa-solid font-bold text-2xl fa-leaf"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black text-slate-900 tracking-tight block leading-none">شبرا الخيمة المستدامة</span>
+                        <span class="text-xs text-eco-700 font-semibold">مبادرة البيئة والتطوير الصناعي</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-6 space-x-reverse font-bold text-slate-700">
+                    <a href="#comparison" class="hover:text-eco-600 transition-colors">السلبيات والإيجابيات</a>
+                    <a href="#vision" class="hover:text-eco-600 transition-colors">الرؤية والأهداف</a>
+                    <a href="#signage" class="hover:text-eco-600 transition-colors text-eco-700">اللافتات الإرشادية</a>
+                    <a href="#simulator" class="hover:text-eco-600 transition-colors">حاسبة التدوير</a>
+                    <a href="#roadmap" class="hover:text-eco-600 transition-colors">خطة العمل</a>
+                    <a href="#report" class="hover:text-eco-600 transition-colors">شارك بفكرة</a>
+                </div>
+
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-eco-100 text-eco-800 border border-eco-200">
+                        <span class="w-2 h-2 rounded-full bg-eco-500 animate-pulse ml-2"></span>
+                        مشروع مدرسي مبتكر
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="gradient-bg text-white relative overflow-hidden py-16 lg:py-24">
+        <!-- Background Shapes -->
+        <div class="absolute -right-10 -top-10 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-10 -bottom-10 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+                    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-emerald-200 text-sm font-semibold border border-white/20">
+                        <i class="fa-solid fa-sparkles ml-2 text-yellow-300"></i> خريطة طريق لشبرا الخيمة خالية من التلوث
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">
+                        تحويل شبرا الخيمة إلى مدينة <span class="text-emerald-300 underline decoration-wavy underline-offset-8">نظيفة ومتقدمة</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-emerald-100 font-light leading-relaxed max-w-2xl">
+                        رؤية متكاملة للتخلص من التلوث والمخلفات الصناعية (في بهتيم، مسطرد، وأحيائها المختلفة) واستبدالها بالتكنولوجيا الخضراء والطاقة النظيفة لبيئة صحية ومستقبل أفضل.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#signage" class="bg-emerald-400 hover:bg-emerald-300 text-slate-900 font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
+                            استعرض اللافتات وطرق التنفيذ <i class="fa-solid fa-signs-post mr-2"></i>
+                        </a>
+                        <a href="#simulator" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-xl border border-white/30 backdrop-blur-md transition-all">
+                            حاسبة التدوير التفاعلية <i class="fa-solid fa-calculator mr-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Stats Badge Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-3xl p-6 text-slate-800 shadow-2xl relative">
+                        <h3 class="text-xl font-bold mb-4 border-b pb-3 border-slate-200 text-slate-900 flex items-center">
+                            <i class="fa-solid fa-chart-pie ml-2 text-eco-600"></i> المستهدفات الرئيسية لتطوير المدينة
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="bg-emerald-50 p-4 rounded-2xl flex items-center justify-between border border-emerald-100">
+                                <div class="flex items-center space-x-3 space-x-reverse">
+                                    <div class="w-10 h-10 rounded-lg bg-emerald-500 text-white flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-smog"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500">خفض انبعاثات المصانع</p>
+                                        <p class="font-black text-slate-800">حتى 75% تقليص</p>
+                                    </div>
+                                </div>
+                                <span class="text-emerald-700 font-bold text-sm">هدف 2030</span>
+                            </div>
+
+                            <div class="bg-teal-50 p-4 rounded-2xl flex items-center justify-between border border-teal-100">
+                                <div class="flex items-center space-x-3 space-x-reverse">
+                                    <div class="w-10 h-10 rounded-lg bg-teal-500 text-white flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-recycle"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500">إعادة تدوير المخلفات</p>
+                                        <p class="font-black text-slate-800">تحويل 80% من النفايات</p>
+                                    </div>
+                                </div>
+                                <span class="text-teal-700 font-bold text-sm">اقتصاد دائري</span>
+                            </div>
+
+                            <div class="bg-cyan-50 p-4 rounded-2xl flex items-center justify-between border border-cyan-100">
+                                <div class="flex items-center space-x-3 space-x-reverse">
+                                    <div class="w-10 h-10 rounded-lg bg-cyan-500 text-white flex items-center justify-center font-bold">
+                                        <i class="fa-solid fa-tree"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500">المساحات الخضراء</p>
+                                        <p class="font-black text-slate-800">+50 ألف شجرة</p>
+                                    </div>
+                                </div>
+                                <span class="text-cyan-700 font-bold text-sm">حزام أخضر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Body -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+        <!-- Positives vs Negatives with Images -->
+        <section id="comparison" class="scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-eco-600 font-extrabold text-sm tracking-wider uppercase bg-eco-50 px-3 py-1 rounded-full border border-eco-200">الواقع والرؤية المستقبلية</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">تشخيص الوضع: السلبيات والإيجابيات بشبرا الخيمة</h2>
+                <p class="text-slate-600 mt-3 text-base">استعراض لأبرز التحديات التي تعاني منها شوارع ومناطق شبرا الخيمة وبهتيم ومسطرد، مقابل الإنجازات والحلول الخضراء المستهدفة.</p>
+                
+                <!-- Filter Tabs -->
+                <div class="flex justify-center gap-3 mt-6">
+                    <button onclick="filterGallery('all')" id="btn-all" class="filter-btn bg-eco-600 text-white font-bold px-5 py-2 rounded-xl transition-all shadow-md">
+                        الكل <i class="fa-solid fa-layer-group ml-1"></i>
+                    </button>
+                    <button onclick="filterGallery('negative')" id="btn-negative" class="filter-btn bg-slate-200 text-slate-700 font-bold px-5 py-2 rounded-xl hover:bg-rose-100 hover:text-rose-700 transition-all">
+                        السلبيات والتحديات <i class="fa-solid fa-triangle-exclamation ml-1 text-rose-500"></i>
+                    </button>
+                    <button onclick="filterGallery('positive')" id="btn-positive" class="filter-btn bg-slate-200 text-slate-700 font-bold px-5 py-2 rounded-xl hover:bg-emerald-100 hover:text-emerald-700 transition-all">
+                        الإيجابيات والحلول <i class="fa-solid fa-circle-check ml-1 text-emerald-500"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cards Grid with Images -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="galleryContainer">
+                
+                <!-- Negative Card 1 -->
+                <div class="gallery-item negative bg-white rounded-2xl overflow-hidden border border-rose-200 shadow-sm hover:shadow-lg transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=600&q=80" alt="المخلفات والتلوث الصناعي" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            <i class="fa-solid fa-triangle-exclamation ml-1"></i> سلبيات
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-1">المخلفات والمقالب العشوائية</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            تراكم المخلفات الصلبة في بعض الطرق الفرعية ومحيط الترع والمصارف بشبرا الخيمة، مما يؤثر على المظهر الحضاري والصحة العامة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Negative Card 2 -->
+                <div class="gallery-item negative bg-white rounded-2xl overflow-hidden border border-rose-200 shadow-sm hover:shadow-lg transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1569163139599-0f4517e36f31?auto=format&fit=crop&w=600&q=80" alt="الانبعاثات والدخان" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            <i class="fa-solid fa-triangle-exclamation ml-1"></i> سلبيات
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-1">انبعاثات المصانع القديمة</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            تلوث الهواء الناتج عن عوادم بعض المصانع القديمة والورش داخل الكتل السكنية المكتظة في مسطرد وبهتيم.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Positive Card 1 -->
+                <div class="gallery-item positive bg-white rounded-2xl overflow-hidden border border-emerald-200 shadow-sm hover:shadow-lg transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=600&q=80" alt="إعادة التدوير الحديثة" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            <i class="fa-solid fa-circle-check ml-1"></i> إيجابيات وحلول
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-1">منظومة جمع وتدوير متطورة</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            تفعيل منظومة حديثة لجمع القمامة من المنبع وتحويل المخلفات الصلبة إلى طاقة ومواد خام نافعة تدعم الاقتصاد المحلي للمدينة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Positive Card 2 -->
+                <div class="gallery-item positive bg-white rounded-2xl overflow-hidden border border-emerald-200 shadow-sm hover:shadow-lg transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt="الأحزمة الخضراء والحدائق" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            <i class="fa-solid fa-circle-check ml-1"></i> إيجابيات وحلول
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-1">زيادة المسطحات الخضراء</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            تشجير الميادين والشوارع الرئيسية ببهتيم وشبرا الخيمة لامتصاص عوادم السيارات وخلق متنفس بيئي صحي للمواطنين.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 1: Strategic Vision Pillars -->
+        <section id="vision">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-eco-600 font-extrabold text-sm tracking-wider uppercase bg-eco-50 px-3 py-1 rounded-full border border-eco-200">حلول جذرية ومجربة</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">محاور تحويل شبرا الخيمة لبيئة نظيفة ومتقدمة</h2>
+                <p class="text-slate-600 mt-3 text-base">خطة عمل مبسطة ترتكز على التطوير التكنولوجي والتنظيم الإداري لإنهاء مشكلات التلوث.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">1. إعادة تنظيم الأنشطة الصناعية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        نقل الورش والمصانع الملوثة من قلب الكتلة السكنية المكتظة في شبرا الخيمة إلى مناطق صناعية مجهزة ومطابقة للاشتراطات البيئية.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-filter"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">2. فلاتر المداخن ومعالجة الصرف</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        إلزام المصانع القائمة بتركيب فلاتر متطورة للمداخن ومنظومات معالجة الصرف الصناعي لمنع تلويث مياه ترعة الإسماعيلية.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-cyan-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">3. الرصد البيئي الذكي</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        نشر حساسات ذكية في مناطق مثل مسطرد وبهتيم لرصد معدلات تلوث الهواء والماء لحظياً واتخاذ إجراءات فورية ضد المخالفين.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-arrows-spin"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">4. الاقتصاد الدائري وإعادة التدوير</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        الاستثمار في خطوط حديثة لفرز وتدوير مخلفات المدينة وتحويلها لمنتجات مفيدة، وتقليل الاعتماد على المقالب العشوائية.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-lime-100 text-lime-700 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-lime-700 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">5. تشجير الشوارع والميادين</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        إطلاق حملات مكثفة لزيادة المساحات الخضراء وتشجير المدارس والمحاور المرئية الكبرى داخل أحياء شبرا الخيمة.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">6. الوعي والمشاركة المجتمعية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        تفعيل دور المدارس (مثل مدرسة بهتيم الثانوية) والشباب في نشر ثقافة الحفاظ على البيئة والمشاركة في مبادرات النظافة.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ECO SIGNAGE & IMPLEMENTATION GUIDE SECTION (WITH REAL IMAGES) -->
+        <section id="signage" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-eco-600 font-extrabold text-sm tracking-wider uppercase bg-eco-50 px-3 py-1 rounded-full border border-eco-200">التوعية البصرية والميدانية</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">اللافتات الإرشادية البيئية: نماذج مصورة ومراحل التنفيذ</h2>
+                <p class="text-slate-600 mt-3 text-base">دليل مرئي وعملي لتصميم ونشر لافتات التوعية في الشوارع، الميادين، ومحيط المدارس ببهتيم وشبرا الخيمة بأقل تكلفة.</p>
+            </div>
+
+            <!-- Signage Samples Grid with Images -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Sample 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f064f?auto=format&fit=crop&w=600&q=80" alt="لافتة شوارع رئيسية" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            <i class="fa-solid fa-signs-post ml-1"></i> لافتة شوارع رئيسية
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-1">"حافظ على نظافة حيك"</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-3">
+                            لافتات تحذيرية وإرشادية توضع عند مداخل الشوارع والحدائق لتشجيع السكان على التخلص السليم من القمامة.
+                        </p>
+                        <div class="bg-slate-50 p-2.5 rounded-xl text-xs text-slate-500 border border-slate-100">
+                            <strong>الأبعاد المقترحة:</strong> 100 × 70 سم (خامات مقاومة للشمس).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="لافتة مدرسية" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            <i class="fa-solid fa-school ml-1"></i> لافتة مدرسية / شبابية
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-1">"مدرسة خضراء.. جيل وعي"</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-3">
+                            توضع بأسوار المدارس (مثل مدرسة بهتيم الثانوية) لشرح أهمية تدوير البلاستيك وترشيد استهلاك الطاقة.
+                        </p>
+                        <div class="bg-slate-50 p-2.5 rounded-xl text-xs text-slate-500 border border-slate-100">
+                            <strong>الأبعاد المقترحة:</strong> 150 × 100 سم (ألوان زاهية وجذابة).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="لافتة حماية المياه" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-cyan-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            <i class="fa-solid fa-droplet ml-1"></i> حماية المياه والترع
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-1">"ترعة نظيفة.. صحة أفضل"</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-3">
+                            توضع بالقرب من المجاري المائية والترع لتوعية المواطنين بعدم إلقاء المخلفات وحماية المياه من التلوث.
+                        </p>
+                        <div class="bg-slate-50 p-2.5 rounded-xl text-xs text-slate-500 border border-slate-100">
+                            <strong>الأبعاد المقترحة:</strong> 120 × 80 سم (مع شعار المبادرة).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple Implementation Steps Box -->
+            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8">
+                <h3 class="text-xl font-extrabold text-slate-900 mb-6 flex items-center">
+                    <i class="fa-solid fa-list-check ml-2 text-eco-600"></i> خطوات تنفيذ وتوزيع اللافتات الإرشادية (بطرق بسيطة واقتصادية)
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm relative">
+                        <span class="absolute -top-3 right-5 bg-eco-600 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shadow">1</span>
+                        <h4 class="font-bold text-slate-900 mt-2 mb-1">التصميم الرقمي</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            تصميم اللافتات باستخدام برامج الهاتف أو الكمبيوتر بكتابة واضحة بخط عريض وشعارات بيئية جذابة ومفهومة.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm relative">
+                        <span class="absolute -top-3 right-5 bg-eco-600 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shadow">2</span>
+                        <h4 class="font-bold text-slate-900 mt-2 mb-1">الطباعة واختيار الخامات</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            طباعة التصاميم على خامات "الفينيل" أو "البانر" المتينة المقاومة لأشعة الشمس والعوامل الجوية بأقل تكلفة.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm relative">
+                        <span class="absolute -top-3 right-5 bg-eco-600 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shadow">3</span>
+                        <h4 class="font-bold text-slate-900 mt-2 mb-1">التثبيت الميداني</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            تعليق اللافتات على أسوار المدارس، الميادين العامة، ومراكز الشباب ببهتيم وشبرا الخيمة بالتنسيق المجتمعي.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm relative">
+                        <span class="absolute -top-3 right-5 bg-eco-600 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shadow">4</span>
+                        <h4 class="font-bold text-slate-900 mt-2 mb-1">المتابعة والتوعية</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            المرور الدوري لمتابعة حالة اللافتات، وتوزيع مطبوعات مصغرة منها على الطلاب والمواطنين لنشر الوعي أوسع.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Interactive Recycling Impact Simulator -->
+        <section id="simulator" class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6 sm:p-10 text-white shadow-xl relative overflow-hidden">
+            <div class="max-w-3xl">
+                <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-800">أداة محاكاة تفاعلية</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold mt-3">محاكي أثر إعادة التدوير والمعالجة بشبرا الخيمة</h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-2">
+                    حرّك شريط نسبة إعادة التدوير والتحسين البيئي للتعرف على النتائج الإيجابية المتوقعة على مدينة شبرا الخيمة.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-center">
+                <!-- Slider Side -->
+                <div class="lg:col-span-6 bg-slate-800/80 p-6 rounded-2xl border border-slate-700">
+                    <label for="recycleSlider" class="block text-sm font-bold text-emerald-300 mb-2">
+                        نسبة إعادة تدوير المخلفات المفترضة:
+                    </label>
+                    <div class="flex items-center space-x-4 space-x-reverse mb-4">
+                        <input id="recycleSlider" type="range" min="10" max="95" value="45" class="w-full h-3 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500">
+                        <span id="sliderValue" class="text-2xl font-black text-emerald-400 w-16 text-center">45%</span>
+                    </div>
+                    <p class="text-xs text-slate-400">
+                        * رفع النسبة يوضح المدى المتوقع لتحسن جودة الهواء والبيئة الحضرية في شبرا الخيمة وبهتيم.
+                    </p>
+                </div>
+
+                <!-- Visual Output Side -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="bg-slate-800/90 border border-slate-700 p-5 rounded-2xl text-center">
+                        <i class="fa-solid fa-cloud-arrow-down text-3xl text-emerald-400 mb-2"></i>
+                        <p class="text-xs text-slate-400">انخفاض انبعاثات الكربون</p>
+                        <p id="co2Reduction" class="text-2xl sm:text-3xl font-black text-emerald-300 mt-1">36%</p>
+                    </div>
+
+                    <div class="bg-slate-800/90 border border-slate-700 p-5 rounded-2xl text-center">
+                        <i class="fa-solid fa-droplet-slash text-3xl text-cyan-400 mb-2"></i>
+                        <p class="text-xs text-slate-400">حماية مياه النيل والترع</p>
+                        <p id="waterProtection" class="text-2xl sm:text-3xl font-black text-cyan-300 mt-1">45%</p>
+                    </div>
+
+                    <div class="bg-slate-800/90 border border-slate-700 p-5 rounded-2xl text-center">
+                        <i class="fa-solid fa-briefcase text-3xl text-amber-400 mb-2"></i>
+                        <p class="text-xs text-slate-400">فرص عمل خضراء محلية</p>
+                        <p id="jobsCreated" class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">+4,500</p>
+                    </div>
+
+                    <div class="bg-slate-800/90 border border-slate-700 p-5 rounded-2xl text-center">
+                        <i class="fa-solid fa-heart-pulse text-3xl text-rose-400 mb-2"></i>
+                        <p class="text-xs text-slate-400">تحسن صحة السكان</p>
+                        <p id="healthIndex" class="text-2xl sm:text-3xl font-black text-rose-300 mt-1">ممتاز</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Roadmap Checklist -->
+        <section id="roadmap" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 border-b pb-6 border-slate-100">
+                <div>
+                    <span class="text-eco-600 font-extrabold text-xs tracking-wider uppercase bg-eco-50 px-3 py-1 rounded-full border border-eco-200">الخطوات الإجرائية</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">خطة العمل والخطوات المباشرة لشبرا الخيمة</h2>
+                </div>
+                <div class="bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-200 text-sm font-semibold text-emerald-800 flex items-center">
+                    <span>نسبة المتابعة والتنفيذ: </span>
+                    <span id="progressText" class="font-black mr-2 text-eco-700">0%</span>
+                </div>
+            </div>
+
+            <!-- Checklist -->
+            <div class="space-y-4" id="checklistContainer">
+                <label class="flex items-start p-4 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors cursor-pointer select-none">
+                    <input type="checkbox" class="checklist-item mt-1 w-5 h-5 text-eco-600 rounded focus:ring-eco-500 accent-eco-600">
+                    <span class="mr-3 text-slate-800 font-medium">تطوير منظومة جمع المخلفات الصلبة من شوارع بهتيم وشبرا الخيمة السكنية.</span>
+                </label>
+
+                <label class="flex items-start p-4 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors cursor-pointer select-none">
+                    <input type="checkbox" class="checklist-item mt-1 w-5 h-5 text-eco-600 rounded focus:ring-eco-500 accent-eco-600">
+                    <span class="mr-3 text-slate-800 font-medium">طباعة وتثبيت اللافتات الإرشادية البيئية بالميادين ومحيط المدارس.</span>
+                </label>
+
+                <label class="flex items-start p-4 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors cursor-pointer select-none">
+                    <input type="checkbox" class="checklist-item mt-1 w-5 h-5 text-eco-600 rounded focus:ring-eco-500 accent-eco-600">
+                    <span class="mr-3 text-slate-800 font-medium">تركيب أجهزة الرصد اللحظي لجودة الهواء بمناطق مسطرد والورش الصناعية.</span>
+                </label>
+
+                <label class="flex items-start p-4 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors cursor-pointer select-none">
+                    <input type="checkbox" class="checklist-item mt-1 w-5 h-5 text-eco-600 rounded focus:ring-eco-500 accent-eco-600">
+                    <span class="mr-3 text-slate-800 font-medium">إلزام المنشآت الصناعية بتوفيق أوضاعها البيئية وتركيب فلاتر المداخن.</span>
+                </label>
+
+                <label class="flex items-start p-4 rounded-xl border border-slate-200 hover:bg-slate-50 transition-colors cursor-pointer select-none">
+                    <input type="checkbox" class="checklist-item mt-1 w-5 h-5 text-eco-600 rounded focus:ring-eco-500 accent-eco-600">
+                    <span class="mr-3 text-slate-800 font-medium">إطلاق مبادرات التشجير وتجميل الشوارع والمحيط المدرسي ببهتيم.</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Citizen Participation & Idea Form -->
+        <section id="report" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-5 space-y-4">
+                <span class="text-eco-600 font-extrabold text-xs tracking-wider uppercase bg-eco-50 px-3 py-1 rounded-full border border-eco-200">صوت المواطن والطالب</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">شارك بفكرتك أو أبلغ عن مقترح لتطوير شبرا الخيمة</h2>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                    المشاركة المجتمعية هي أساس نجاح تطوير مدينتنا. يسعدنا استقبال مقترحات طلاب المدارس وأهالي شبرا الخيمة وبهتيم ومسطرد لتحسين البيئة.
+                </p>
+                <div class="bg-amber-50 p-4 rounded-2xl border border-amber-200 text-amber-900 text-sm flex items-start">
+                    <i class="fa-solid fa-lightbulb text-amber-500 text-xl ml-3 mt-0.5"></i>
+                    <div>
+                        <strong class="block mb-1">أفكار مقترحة للمشاريع:</strong>
+                        مبادرات المدارس الخضراء، تصميم اللافتات الإرشادية، وتدوير المخلفات المنزلية.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <form id="ideaForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">الاسم الكريم / الطالب</label>
+                        <input type="text" required placeholder="أدخل اسمك هنا" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-eco-500 focus:outline-none">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">المنطقة / الحي بشبرا الخيمة</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-eco-500 focus:outline-none">
+                                <option>بهتيم</option>
+                                <option>مسطرد</option>
+                                <option>إبراهيم بك</option>
+                                <option>بيجام</option>
+                                <option>منشية الحرية</option>
+                                <option>شارع عشرين / أمتداد شبرا</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">نوع المشاركة</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-eco-500 focus:outline-none">
+                                <option>فكرة مبتكرة لتطوير الحي</option>
+                                <option>مقترح نص لافتة إرشادية بيئية</option>
+                                <option>مشروع مدرسي بيئي مقترح</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">تفاصيل الفكرة أو المقترح</label>
+                        <textarea rows="4" required placeholder="اكتب تفاصيل فكرتك وكيفية تطبيقها..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-eco-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-eco-600 hover:bg-eco-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-eco-600/20 transition-colors">
+                        إرسال المشاركة <i class="fa-solid fa-paper-plane mr-2"></i>
+                    </button>
+                </form>
+
+                <!-- Success Alert Box -->
+                <div id="alertBox" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-300 text-emerald-800 rounded-xl text-center font-bold">
+                    <i class="fa-solid fa-circle-check text-xl ml-2"></i> تم إرسال مشاركتك بنجاح! شكراً لمساهمتك في مستقبل شبرا الخيمة.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PROMINENT FOOTER -->
+    <footer class="bg-slate-900 text-white mt-auto border-t-4 border-eco-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-slate-800 pb-8">
+                
+                <div class="flex items-center space-x-3 space-x-reverse text-center md:text-right">
+                    <div class="w-12 h-12 bg-eco-600 rounded-2xl flex items-center justify-center text-white text-2xl font-black">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-black">مبادرة شبرا الخيمة المستدامة</h4>
+                        <p class="text-slate-400 text-xs mt-0.5">رؤية شبابية نحو بيئة حضرية وصناعية متطورة</p>
+                    </div>
+                </div>
+
+                <!-- Prominent Student Credit Banner -->
+                <div class="bg-gradient-to-r from-emerald-950 to-slate-800 border border-emerald-500/40 rounded-2xl p-4 text-center md:text-right shadow-lg">
+                    <span class="text-xs text-emerald-400 font-bold block mb-1">
+                        <i class="fa-solid fa-graduation-cap ml-1"></i> إعداد وتصميم المبادرة:
+                    </span>
+                    <p class="text-xl font-extrabold text-white">
+                        برعاية الطالب: <span class="text-emerald-300 underline underline-offset-4">محمد أحمد محمد</span>
+                    </p>
+                    <p class="text-sm font-semibold text-slate-300 mt-1">
+                        <i class="fa-solid fa-school ml-1 text-emerald-400"></i> مدرسة بهتيم الثانوية بنين
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-6 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <p>© 2026 جميع الحقوق محفوظة - مشروع التوعية البيئية والتطوير الحضري بمدينة شبرا الخيمة.</p>
+                <p class="text-slate-400">محافظة القليوبية | شبرا الخيمة - بهتيم</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript Logic -->
+    <script>
+        // Gallery Filter Logic
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.className = "filter-btn bg-slate-200 text-slate-700 font-bold px-5 py-2 rounded-xl hover:bg-slate-300 transition-all";
+            });
+
+            if (category === 'all') {
+                document.getElementById('btn-all').className = "filter-btn bg-eco-600 text-white font-bold px-5 py-2 rounded-xl transition-all shadow-md";
+            } else if (category === 'negative') {
+                document.getElementById('btn-negative').className = "filter-btn bg-rose-600 text-white font-bold px-5 py-2 rounded-xl transition-all shadow-md";
+            } else if (category === 'positive') {
+                document.getElementById('btn-positive').className = "filter-btn bg-emerald-600 text-white font-bold px-5 py-2 rounded-xl transition-all shadow-md";
+            }
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // 1. Simulator Logic
+        const slider = document.getElementById('recycleSlider');
+        const sliderVal = document.getElementById('sliderValue');
+        const co2Text = document.getElementById('co2Reduction');
+        const waterText = document.getElementById('waterProtection');
+        const jobsText = document.getElementById('jobsCreated');
+        const healthText = document.getElementById('healthIndex');
+
+        slider.addEventListener('input', function() {
+            const val = parseInt(this.value);
+            sliderVal.innerText = val + '%';
+            
+            // Mathematical approximations based on recycling input
+            const co2 = Math.round(val * 0.8);
+            const water = Math.round(val * 1.0);
+            const jobs = Math.round(val * 100);
+
+            co2Text.innerText = co2 + '%';
+            waterText.innerText = water + '%';
+            jobsText.innerText = '+' + jobs.toLocaleString();
+
+            if (val < 30) {
+                healthText.innerText = 'ضعيف';
+                healthText.className = 'text-2xl sm:text-3xl font-black text-rose-400 mt-1';
+            } else if (val < 60) {
+                healthText.innerText = 'متوسط';
+                healthText.className = 'text-2xl sm:text-3xl font-black text-amber-300 mt-1';
+            } else {
+                healthText.innerText = 'ممتاز';
+                healthText.className = 'text-2xl sm:text-3xl font-black text-emerald-300 mt-1';
+            }
+        });
+
+        // 2. Checklist Progress Tracker Logic
+        const checkboxes = document.querySelectorAll('.checklist-item');
+        const progressText = document.getElementById('progressText');
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', updateProgress);
+        });
+
+        function updateProgress() {
+            const total = checkboxes.length;
+            const checked = document.querySelectorAll('.checklist-item:checked').length;
+            const percentage = Math.round((checked / total) * 100);
+            progressText.innerText = percentage + '%';
+        }
+
+        // 3. Form Submission Handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const alertBox = document.getElementById('alertBox');
+            alertBox.classList.remove('hidden');
+            document.getElementById('ideaForm').reset();
+            
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
